@@ -8,3 +8,4 @@
 * mysql-client
 * postgresql-client
 * redis-cli
+* bind-tools
