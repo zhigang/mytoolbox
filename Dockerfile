@@ -1,4 +1,4 @@
-FROM alpine
+FROM nginx:stable-alpine
 
 LABEL maintainer="siriuszg <zhigang52110@sina.com>"
 
