@@ -9,3 +9,4 @@
 * postgresql-client
 * redis-cli
 * bind-tools
+* xz
