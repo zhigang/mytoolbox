@@ -17,13 +17,14 @@ jobs:
         id: get-version
         run: echo "tag=${GITHUB_REF#refs/*/}" >> "$GITHUB_OUTPUT"
       - name: Create Release
-        uses: comnoco/create-release@v2.0.5
+        uses: softprops/action-gh-release@v2
+        if: github.ref_type == 'tag'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           RELEASE_VERSION: ${{ steps.get-version.outputs.tag }}
         with:
           tag_name: ${{ env.RELEASE_VERSION }}
-          release_name: ${{ env.RELEASE_VERSION }}
+          name: ${{ env.RELEASE_VERSION }}
           body: |
             version ${{ env.RELEASE_VERSION }}
           draft: false
