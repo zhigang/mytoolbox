@@ -17,7 +17,7 @@ jobs:
         id: get-version
         run: echo "tag=${GITHUB_REF#refs/*/}" >> "$GITHUB_OUTPUT"
       - name: Create Release
-        uses: comnoco/create-release@v2
+        uses: comnoco/create-release@v2.0.5
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           RELEASE_VERSION: ${{ steps.get-version.outputs.tag }}
