@@ -10,3 +10,4 @@
 * redis-cli
 * bind-tools
 * xz
+* openssh
